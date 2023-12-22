@@ -8,7 +8,7 @@ def generate_request():
 
 def process_request(request):
     print(
-        f"\x1b[35mProcessed application № {request}\x1b[0m"
+        f"\x1b[38;2;210;88;113mProcessed application № {request}\x1b[0m"
     ) 
 
 queue = queue.Queue()
@@ -19,12 +19,12 @@ while True:
     process_request(queue.get())
 
     answer = input(
-        f"\x1b[32mContinue? (Yes/No or +/-) ==> \x1b[0m"
+        f"\x1b[38;2;242;194;207mContinue? (Yes/No or +/-) ==> \x1b[0m"
     ) 
     answer = answer.replace(" ", "").lower()
     while answer not in ("yes", "no", "+", "-"):
         answer = input(
-            f"\x1b[31mInvalid command. Enter one of the following commands: Yes, No, +, - ==> \x1b[0m"
+            f"\x1b[38;2;242;148;173mInvalid command. Enter one of the following commands: Yes, No, +, - ==> \x1b[0m"
         ) 
 
     if answer in ("yes", "no", "+", "-"):
